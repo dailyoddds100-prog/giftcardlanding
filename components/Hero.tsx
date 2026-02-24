@@ -62,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-[11px] text-[#8B6E73] font-bold uppercase tracking-widest">
         <div className="flex items-center gap-1.5">
-          <svg
+          {/* <svg
             className="w-4 h-4 text-green-500"
             fill="none"
             stroke="currentColor"
@@ -74,11 +74,11 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
               strokeWidth={3}
               d="M5 13l4 4L19 7"
             />
-          </svg>
+          </svg> */}
           {/* No Fees */}
         </div>
         <div className="flex items-center gap-1.5">
-          <svg
+          {/* <svg
             className="w-4 h-4 text-green-500"
             fill="none"
             stroke="currentColor"
@@ -90,7 +90,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
               strokeWidth={3}
               d="M5 13l4 4L19 7"
             />
-          </svg>
+          </svg> */}
           {/* Safe & Verified */}
         </div>
       </div>
