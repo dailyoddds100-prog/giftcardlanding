@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
               d="M5 13l4 4L19 7"
             />
           </svg>
-          No Fees
+          {/* No Fees */}
         </div>
         <div className="flex items-center gap-1.5">
           <svg
@@ -91,7 +91,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
               d="M5 13l4 4L19 7"
             />
           </svg>
-          Safe & Verified
+          {/* Safe & Verified */}
         </div>
       </div>
     </section>
