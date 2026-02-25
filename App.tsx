@@ -57,10 +57,10 @@ const App: React.FC = () => {
           onClick={handleCtaClick}
           className="w-full py-4.5 bg-[#E91E63] text-white font-extrabold rounded-2xl shadow-[0_8px_20px_rgba(233,30,99,0.4)] active:scale-95 transition-all text-lg flex items-center justify-center gap-2 animate-shake"
         >
-          <span>Claim $100 Card Now</span>
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* <span>Claim $100 Card Now</span> */}
+          {/* <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
+          </svg> */}
         </button>
       </div>
 
