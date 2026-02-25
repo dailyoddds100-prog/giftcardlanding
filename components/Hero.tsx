@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
       </p> */}
 
       {/* Mock Gift Card Visual */}
-      <a href="https://google.com" target="_blank"
+      <a href="https://trkfy.org/aff_c?offer_id=346&aff_id=168663" target="_blank"
         className="relative mb-12 w-full max-w-[280px] aspect-[1.6/1] bg-gradient-to-br from-[#E91E63] to-[#C2185B] rounded-2xl shadow-2xl p-6 text-left overflow-hidden group hover:rotate-1 transition-transform cursor-pointer"
         // onClick={onStart}
       >
@@ -49,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
         </div>
       </a>
 
-      <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+      <a href="https://trkfy.org/aff_c?offer_id=346&aff_id=168663" target="_blank" rel="noopener noreferrer">
         <button
           // onClick={onStart}
 
