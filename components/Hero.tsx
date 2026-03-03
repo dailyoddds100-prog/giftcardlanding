@@ -20,7 +20,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
 
       <h1 className="text-4xl md:text-6xl font-black text-[#4A1D24] leading-[1.1] mb-6 relative z-10">
         Get a{" "}
-        <span className="text-[#E91E63] italic font-serif">$100 Fashion</span>{" "}
+        <span className="text-[#E91E63] italic font-serif">$750 Fashion</span>{" "}
         Gift Card Today
       </h1>
 
@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
       </p> */}
 
       {/* Mock Gift Card Visual */}
-      <a href="https://trkfy.org/aff_c?offer_id=346&aff_id=168663" target="_blank"
+      <a href="https://glctrk.org/aff_c?offer_id=90&aff_id=168663" target="_blank"
         className="relative mb-12 w-full max-w-[280px] aspect-[1.6/1] bg-gradient-to-br from-[#E91E63] to-[#C2185B] rounded-2xl shadow-2xl p-6 text-left overflow-hidden group hover:rotate-1 transition-transform cursor-pointer"
         // onClick={onStart}
       >
@@ -39,17 +39,17 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
           <div className="text-white/80 font-bold tracking-widest text-[10px] uppercase">
             Official Reward Card
           </div>
-          <div className="text-3xl font-black text-white">$100.00</div>
+          <div className="text-3xl font-black text-white">$750.00</div>
           <div className="flex justify-between items-end">
             <div className="text-white/60 text-[8px] font-mono">
-              VALID FOR: 24 HOURS
+              {/* VALID FOR: 24 HOURS */}
             </div>
             <div className="w-10 h-6 bg-white/20 rounded-md"></div>
           </div>
         </div>
       </a>
 
-      <a href="https://trkfy.org/aff_c?offer_id=346&aff_id=168663" target="_blank" rel="noopener noreferrer">
+      <a href="https://glctrk.org/aff_c?offer_id=90&aff_id=168663" target="_blank" rel="noopener noreferrer">
         <button
           // onClick={onStart}
 
