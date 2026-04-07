@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ULTRA T-Booster | Reclaim Your Strength Naturally</title>
+<link rel="icon" type="image/x-icon" href="/ut.webp">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #C9A227;
+    --gold-dark: #8B6D0D;
+    --gold-light: #F5D97A;
+    --black: #0D0D0D;
+    --charcoal: #1A1A1A;
+    --dark-gray: #252525;
+    --mid-gray: #3A3A3A;
+    --text-muted: #999;
+    --text-body: #CCCCCC;
+    --white: #FFFFFF;
+    --red-accent: #C0392B;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text-body);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background:
+      radial-gradient(ellipse at 70% 50%, rgba(201,162,39,0.12) 0%, transparent 65%),
+      linear-gradient(180deg, #0D0D0D 0%, #1A1200 50%, #0D0D0D 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 80px, rgba(201,162,39,0.03) 80px, rgba(201,162,39,0.03) 81px),
+      repeating-linear-gradient(90deg, transparent, transparent 80px, rgba(201,162,39,0.03) 80px, rgba(201,162,39,0.03) 81px);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    max-width: 820px;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,162,39,0.4);
+    padding: 6px 20px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(56px, 10vw, 110px);
+    line-height: 0.95;
+    letter-spacing: 0.02em;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    display: block;
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    font-weight: 300;
+    color: var(--text-body);
+    max-width: 560px;
+    margin: 24px auto 44px;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold) 0%, #E8B830 50%, var(--gold) 100%);
+    color: var(--black);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 18px 52px;
+    border-radius: 2px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 30px rgba(201,162,39,0.35);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 40px rgba(201,162,39,0.5);
+  }
+
+  .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0; left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transform: skewX(-20deg);
+    animation: shimmer 2.5s infinite 1s;
+  }
+
+  @keyframes shimmer {
+    0%   { left: -100%; }
+    100% { left: 200%; }
+  }
+
+  .trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(201,162,39,0.15);
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-weight: 400;
+  }
+
+  .trust-icon {
+    width: 18px;
+    height: 18px;
+    fill: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* PROBLEM SECTION */
+  .problem {
+    background: var(--charcoal);
+    padding: 100px 24px;
+    position: relative;
+  }
+
+  .problem::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.0;
+    color: var(--white);
+    margin-bottom: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .problem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2px;
+    margin-top: 56px;
+    border: 1px solid var(--mid-gray);
+  }
+
+  .problem-card {
+    background: var(--dark-gray);
+    padding: 36px 28px;
+    position: relative;
+    transition: background 0.25s;
+  }
+
+  .problem-card:hover { background: #2e2e2e; }
+
+  .problem-icon {
+    font-size: 28px;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .problem-card h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 8px;
+    letter-spacing: 0.02em;
+  }
+
+  .problem-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* SOLUTION SECTION */
+  .solution {
+    padding: 100px 24px;
+    background: var(--black);
+    position: relative;
+  }
+
+  .solution-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+
+  @media (max-width: 700px) {
+    .solution-layout { grid-template-columns: 1fr; gap: 40px; }
+  }
+
+  .solution-visual {
+    position: relative;
+    text-align: center;
+  }
+
+  .bottle-placeholder {
+    width: 200px;
+    height: 320px;
+    background: linear-gradient(160deg, #1f1500, #3a2800, #1f1500);
+    border: 2px solid rgba(201,162,39,0.5);
+    border-radius: 12px 12px 20px 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 0 60px rgba(201,162,39,0.15), inset 0 0 40px rgba(201,162,39,0.05);
+  }
+
+  .bottle-label-inner {
+    text-align: center;
+    padding: 16px;
+  }
+
+  .bottle-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--gold-light);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .bottle-product {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+    color: var(--gold);
+    line-height: 1;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .bottle-divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 8px auto;
+  }
+
+  .bottle-tagline {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-top: 10px;
+  }
+
+  .glow-ring {
+    position: absolute;
+    inset: -20px;
+    border-radius: 16px 16px 24px 24px;
+    background: radial-gradient(ellipse at 50% 30%, rgba(201,162,39,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .benefit-list {
+    list-style: none;
+  }
+
+  .benefit-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    color: var(--text-body);
+    line-height: 1.5;
+  }
+
+  .benefit-list li:last-child { border-bottom: none; }
+
+  .check {
+    width: 22px;
+    height: 22px;
+    background: rgba(201,162,39,0.12);
+    border: 1px solid rgba(201,162,39,0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .check svg { width: 11px; height: 11px; fill: var(--gold); }
+
+  /* HOW IT WORKS */
+  .how {
+    background: var(--charcoal);
+    padding: 100px 24px;
+    position: relative;
+  }
+
+  .how::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1px;
+    margin-top: 60px;
+    background: var(--mid-gray);
+  }
+
+  .step {
+    background: var(--charcoal);
+    padding: 48px 32px;
+    position: relative;
+  }
+
+  .step-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: rgba(201,162,39,0.12);
+    line-height: 1;
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    letter-spacing: -2px;
+  }
+
+  .step h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-bar {
+    width: 32px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 20px;
+    border-radius: 2px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials {
+    padding: 100px 24px;
+    background: var(--black);
+  }
+
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 56px;
+  }
+
+  .testi-card {
+    background: var(--charcoal);
+    border: 1px solid var(--mid-gray);
+    border-radius: 4px;
+    padding: 32px 28px;
+    position: relative;
+  }
+
+  .testi-card::before {
+    content: '"';
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    color: rgba(201,162,39,0.12);
+    position: absolute;
+    top: 10px;
+    left: 24px;
+    line-height: 1;
+  }
+
+  .stars {
+    color: var(--gold);
+    font-size: 13px;
+    margin-bottom: 16px;
+    letter-spacing: 2px;
+  }
+
+  .testi-text {
+    font-size: 14px;
+    color: var(--text-body);
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .testi-author {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .testi-age {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 300;
+  }
+
+  /* CTA */
+  .cta-section {
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,162,39,0.18) 0%, transparent 60%),
+      var(--charcoal);
+    padding: 120px 24px;
+    text-align: center;
+    position: relative;
+  }
+
+  .cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .cta-section .section-title { margin-bottom: 16px; }
+
+  .cta-sub {
+    font-size: 16px;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto 40px;
+  }
+
+  .guarantee-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(201,162,39,0.08);
+    border: 1px solid rgba(201,162,39,0.25);
+    border-radius: 2px;
+    padding: 12px 24px;
+    font-size: 13px;
+    color: var(--gold-light);
+    margin-top: 28px;
+  }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    background: var(--black);
+    border-top: 1px solid var(--mid-gray);
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .disclaimer p {
+    font-size: 11px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,13,13,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,162,39,0.15);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--white); }
+
+  .nav-cta {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--black);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .nav-cta:hover { opacity: 0.85; }
+
+  .hero { padding-top: 120px; }
+
+  @media (max-width: 480px) {
+    .trust-bar { gap: 20px; }
+    .trust-item { font-size: 12px; }
+    .problem-grid, .steps { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">ULTRA <span>T-Booster</span></a>
+  <a href="https://health-beauty-healthbuy.myshopify.com/products/protestosterone?bg_ref=hPkyaMaDTa" class="nav-cta">Get It Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">100% Natural · Herbal Formula · No Side Effects</span>
+    <h1>Reclaim<br><span>Your Edge</span></h1>
+    <p class="hero-sub">Feel the strength, energy, and drive you thought you'd lost forever — with the all-natural testosterone support formula trusted by men of all ages.</p>
+    <a href="https://health-beauty-healthbuy.myshopify.com/products/protestosterone?bg_ref=hPkyaMaDTa" class="btn-primary">Boost My Testosterone →</a>
+
+    <div class="trust-bar">
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        All Natural Ingredients
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+        Zero Side Effects
+      </div>
+      <div class="trust-item">
+        <svg class="trust-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        Expert Herbalist Formula
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="problem">
+  <div class="container">
+    <p class="section-label">Sound Familiar?</p>
+    <h2 class="section-title">Is Feeling Old<br>Getting Old?</h2>
+    <p style="font-size: 16px; color: var(--text-muted); max-width: 620px; line-height: 1.8;">When testosterone drops, it affects everything. It's not just in your head — it's biology. Every man faces this eventually, but you don't have to accept it.</p>
+
+    <div class="problem-grid">
+      <div class="problem-card">
+        <span class="problem-icon">⚡</span>
+        <h3>Constant Fatigue</h3>
+        <p>Feeling drained and worn out no matter how much you sleep? Low testosterone robs you of your natural energy.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🔥</span>
+        <h3>Vanishing Sex Drive</h3>
+        <p>Your sex drive and virility are shadows of what they used to be, stealing your confidence and joy.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">💪</span>
+        <h3>Loss of Strength</h3>
+        <p>Getting weaker and feeling less capable is a direct result of declining testosterone levels as you age.</p>
+      </div>
+      <div class="problem-card">
+        <span class="problem-icon">🧠</span>
+        <h3>Not Yourself</h3>
+        <p>That sense that you're just not the man you used to be — less sharp, less motivated, less alive.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution">
+  <div class="container">
+    <div class="solution-layout">
+      <div>
+        <p class="section-label">The Natural Solution</p>
+        <h2 class="section-title">Get Your Old<br>Self Back</h2>
+        <p style="margin-bottom: 32px; font-size: 15px; color: var(--text-muted); line-height: 1.8;">ULTRA T-Booster was created by expert herbalists, combining ingredients long-used for their ability to address symptoms associated with low testosterone. All natural. No side effects. Just results.</p>
+
+        <ul class="benefit-list">
+          <li>
+            <span class="check"><svg viewBox="0 0 12 9"><path d="M1 4.5L4.5 8 11 1" stroke="#C9A227" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Stimulates your pituitary gland to release more luteinizing hormone — signaling your body to produce more testosterone naturally
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 9"><path d="M1 4.5L4.5 8 11 1" stroke="#C9A227" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Frees up bound testosterone, making more of it available for your body to actually use
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 9"><path d="M1 4.5L4.5 8 11 1" stroke="#C9A227" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Backed by proven herbal science with research to support every ingredient
+          </li>
+          <li>
+            <span class="check"><svg viewBox="0 0 12 9"><path d="M1 4.5L4.5 8 11 1" stroke="#C9A227" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            Completely natural formula — no synthetic hormones, no prescriptions, no side effects
+          </li>
+        </ul>
+      </div>
+
+      <div class="solution-visual">
+        <div class="bottle-placeholder">
+          <div class="glow-ring"></div>
+          <div class="bottle-label-inner">
+            <span class="bottle-name">Premium Formula</span>
+            <span class="bottle-product">ULTRA<br>T-Booster</span>
+            <div class="bottle-divider"></div>
+            <span style="font-size: 10px; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-top: 8px;">Natural Herbal Supplement</span>
+            <span class="bottle-tagline">60 Capsules · 30-Day Supply</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="container">
+    <p class="section-label">The Science</p>
+    <h2 class="section-title">How It Works</h2>
+    <p style="font-size: 15px; color: var(--text-muted); max-width: 580px; line-height: 1.8;">Young men produce abundant testosterone. As we age, this production slows — but ULTRA T-Booster works with your body's own systems to reverse that decline.</p>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="step-bar"></div>
+        <h3>Hormonal Signaling</h3>
+        <p>The formula supports your pituitary gland to release more luteinizing hormone — the key messenger that tells your body to produce testosterone.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="step-bar"></div>
+        <h3>Free Testosterone</h3>
+        <p>Most testosterone in older men is bound and unusable. ULTRA T-Booster frees that bound testosterone so your body can actually benefit from it.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="step-bar"></div>
+        <h3>Feel the Difference</h3>
+        <p>With testosterone levels rising and more available to your body, energy returns, drive is restored, and you feel like yourself again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <p class="section-label">Real Results</p>
+    <h2 class="section-title">Men Are Talking</h2>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">I felt like a completely different man within a few weeks. My energy is back, my mood improved, and I feel motivated again. I wish I'd found this years ago.</p>
+        <p class="testi-author">Michael T.</p>
+        <p class="testi-age">Age 52</p>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">My doctor told me my levels were low. I tried ULTRA T-Booster before going the prescription route — and honestly, I'm glad I did. Natural and it actually works.</p>
+        <p class="testi-author">James R.</p>
+        <p class="testi-age">Age 47</p>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">My wife noticed before I did. Better energy, better mood, felt like my old self. The all-natural formula was a big deal for me — no side effects whatsoever.</p>
+        <p class="testi-author">David K.</p>
+        <p class="testi-age">Age 58</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="order">
+  <div class="container">
+    <p class="section-label">Limited Time Offer</p>
+    <h2 class="section-title">Take Back Your<br>Strength Today</h2>
+    <p class="cta-sub">You don't have to accept the way you feel. Thousands of men have reclaimed their vitality with ULTRA T-Booster. You're next.</p>
+    <a href="https://health-beauty-healthbuy.myshopify.com/products/protestosterone?bg_ref=hPkyaMaDTa" class="btn-primary" style="font-size: 16px; padding: 22px 64px;">Yes — I Want To Feel Like Myself Again →</a>
+    <div style="margin-top: 20px;">
+      <div class="guarantee-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Satisfaction Guaranteed · All-Natural · No Prescription Required
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCLAIMER -->
+<div class="disclaimer">
+  <p>* These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary. This website contains affiliate links and the site owner may receive a commission if you purchase through these links. Individual results will vary based on lifestyle, diet, and other factors. Always consult your physician before beginning any supplement regimen.</p>
+</div>
+
+</body>
+</html>
